@@ -72,9 +72,11 @@ $(document).ready(function () {
         const figure = $(this).val();
         $('#inputFields').html('');
         $('#results').hide();
+        $('#figureImage').html(''); // Limpiamos cualquier imagen previa
 
         switch (figure) {
             case 'rectangle':
+                $('#figureImage').html('<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-square-half" viewBox="0 0 16 16"><path d="M8 15V1h6a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1zm6 1a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg>');
                 $('#inputFields').append(`
                     <div class="mb-3">
                         <label for="width" class="form-label">Ancho:</label>
@@ -87,6 +89,7 @@ $(document).ready(function () {
                 `);
                 break;
             case 'circle':
+                $('#figureImage').html('<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>');
                 $('#inputFields').append(`
                     <div class="mb-3">
                         <label for="radius" class="form-label">Radio:</label>
@@ -95,6 +98,7 @@ $(document).ready(function () {
                 `);
                 break;
             case 'square':
+                $('#figureImage').html('<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-square-fill" viewBox="0 0 16 16"><path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z"/></svg>');
                 $('#inputFields').append(`
                     <div class="mb-3">
                         <label for="side" class="form-label">Lado:</label>
@@ -103,6 +107,7 @@ $(document).ready(function () {
                 `);
                 break;
             case 'triangle':
+                $('#figureImage').html('<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-triangle-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.022 1.566a1.13 1.13 0 0 1 1.96 0l6.857 11.667c.457.778-.092 1.767-.98 1.767H1.144c-.889 0-1.437-.99-.98-1.767z"/></svg>');
                 $('#inputFields').append(`
                     <div class="mb-3">
                         <label for="base" class="form-label">Base:</label>

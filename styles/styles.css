@@ -25,3 +25,9 @@ h1 {
 #inputFields {
     display: none;
 }
+
+#figureImage img {
+    max-width: 150px;
+    height: auto;
+    margin-top: 20px;
+}
