@@ -80,7 +80,6 @@ function validateSquare(side) {
 }
 
 function validateTriangle(base, height, side1, side2) {
-    // Validar que la suma de cualquier par de lados sea mayor que el tercer lado (inequidad triangular)
     return (
         base > 0 && height > 0 && side1 > 0 && side2 > 0 &&
         base + side1 > side2 &&
