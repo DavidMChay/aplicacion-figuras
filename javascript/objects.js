@@ -139,11 +139,11 @@ $(document).ready(function () {
                         <input type="number" class="form-control" id="height" step="0.01" required>
                     </div>
                     <div class="mb-3">
-                        <label for="side1" class="form-label">Lado 1:</label>
+                        <label for="side1" class="form-label">Lado A:</label>
                         <input type="number" class="form-control" id="side1" step="0.01" required>
                     </div>
                     <div class="mb-3">
-                        <label for="side2" class="form-label">Lado 2:</label>
+                        <label for="side2" class="form-label">Lado B:</label>
                         <input type="number" class="form-control" id="side2" step="0.01" required>
                     </div>
                 `);
