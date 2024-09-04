@@ -164,7 +164,7 @@ $(document).ready(function () {
                     const width = $('#width').val();
                     const height = $('#height').val();
                     if (!validateRectangle(width, height)) {
-                        alert('Dimensiones inválidas para un rectángulo.');
+                        alert('Dimensiones inválidas para un rectángulo. Introduce solo valores númericos positivos.');
                         return;
                     }
                     geometry = new Rectangle(width, height);
@@ -172,7 +172,7 @@ $(document).ready(function () {
                 case 'circle':
                     const radius = $('#radius').val();
                     if (!validateCircle(radius)) {
-                        alert('Radio inválido para un círculo.');
+                        alert('Radio inválido para un círculo. Introduce solo valores númericos positivos.');
                         return;
                     }
                     geometry = new Circle(radius);
@@ -180,7 +180,7 @@ $(document).ready(function () {
                 case 'square':
                     const side = $('#side').val();
                     if (!validateSquare(side)) {
-                        alert('Lado inválido para un cuadrado.');
+                        alert('Lado inválido para un cuadrado. Introduce solo valores númericos positivos.');
                         return;
                     }
                     geometry = new Square(side);
@@ -191,7 +191,7 @@ $(document).ready(function () {
                     const side1 = $('#side1').val();
                     const side2 = $('#side2').val();
                     if (!validateTriangle(base, heightTri, side1, side2)) {
-                        alert('Dimensiones inválidas para un triángulo.');
+                        alert('Dimensiones inválidas para un triángulo. Introduce solo valores númericos positivos.');
                         return;
                     }
                     geometry = new Triangle(base, heightTri, side1, side2);
