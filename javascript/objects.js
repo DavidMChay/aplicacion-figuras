@@ -67,6 +67,28 @@ class Triangle extends Geometry {
     }
 }
 
+function validateRectangle(width, height) {
+    return width > 0 && height > 0;
+}
+
+function validateCircle(radius) {
+    return radius > 0;
+}
+
+function validateSquare(side) {
+    return side > 0;
+}
+
+function validateTriangle(base, height, side1, side2) {
+    // Validar que la suma de cualquier par de lados sea mayor que el tercer lado (inequidad triangular)
+    return (
+        base > 0 && height > 0 && side1 > 0 && side2 > 0 &&
+        base + side1 > side2 &&
+        base + side2 > side1 &&
+        side1 + side2 > base
+    );
+}
+
 $(document).ready(function () {
     $('#figureSelect').change(function () {
         const figure = $(this).val();
@@ -142,14 +164,26 @@ $(document).ready(function () {
                 case 'rectangle':
                     const width = $('#width').val();
                     const height = $('#height').val();
+                    if (!validateRectangle(width, height)) {
+                        alert('Dimensiones inválidas para un rectángulo.');
+                        return;
+                    }
                     geometry = new Rectangle(width, height);
                     break;
                 case 'circle':
                     const radius = $('#radius').val();
+                    if (!validateCircle(radius)) {
+                        alert('Radio inválido para un círculo.');
+                        return;
+                    }
                     geometry = new Circle(radius);
                     break;
                 case 'square':
                     const side = $('#side').val();
+                    if (!validateSquare(side)) {
+                        alert('Lado inválido para un cuadrado.');
+                        return;
+                    }
                     geometry = new Square(side);
                     break;
                 case 'triangle':
@@ -157,6 +191,10 @@ $(document).ready(function () {
                     const heightTri = $('#height').val();
                     const side1 = $('#side1').val();
                     const side2 = $('#side2').val();
+                    if (!validateTriangle(base, heightTri, side1, side2)) {
+                        alert('Dimensiones inválidas para un triángulo.');
+                        return;
+                    }
                     geometry = new Triangle(base, heightTri, side1, side2);
                     break;
             }
