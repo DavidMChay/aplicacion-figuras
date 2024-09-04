@@ -72,7 +72,7 @@ $(document).ready(function () {
         const figure = $(this).val();
         $('#inputFields').html('');
         $('#results').hide();
-        $('#figureImage').html(''); // Limpiamos cualquier imagen previa
+        $('#figureImage').html('');
 
         switch (figure) {
             case 'rectangle':
