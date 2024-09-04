@@ -1,0 +1,4 @@
+class Geometry {
+    calculateArea() {}
+    calculatePerimeter() {}
+}
