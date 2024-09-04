@@ -1,4 +1,4 @@
-class Triangle extends Geometry {
+class TriangleScalene extends Geometry {
     constructor(base, height, side1, side2) {
         super();
         this.base = parseFloat(base);
