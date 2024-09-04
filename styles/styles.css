@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Zain:wght@200;300;400;700;800;900&display=swap');
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Zain', sans-serif;
     background-color: #f7f7f7;
     color: #333;
+    font-size: 2rem;
 }
 
 .container {
@@ -16,6 +18,8 @@ body {
 h1 {
     font-weight: 700;
     color: #007bff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.2rem;
 }
 
 #results {
