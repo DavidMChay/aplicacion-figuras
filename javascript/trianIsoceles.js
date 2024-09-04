@@ -14,3 +14,9 @@ class TriangleIsoceles extends Geometry {
         return this.base + this.sides * 2;
     }
 }
+
+function validateTriangleIsosceles(base, height, sides) {
+    return base > 0 && height > 0 && sides > 0 &&
+        2 * sides > base && 
+        sides + base > sides;
+}

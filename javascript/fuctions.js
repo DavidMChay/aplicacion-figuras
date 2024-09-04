@@ -147,7 +147,7 @@ $(document).ready(function () {
                     const baseIso = $('#base').val();
                     const heightTriIso = $('#height').val();
                     const sides = $('#sides').val();
-                    if (!validateTriangle(baseIso, heightTriIso, sides, sides)) {
+                    if (!validateTriangleIsosceles(baseIso, heightTriIso, sides, sides)) {
                         alert('Dimensiones inválidas para un triángulo. Introduce solo valores númericos positivos.');
                         return;
                     }
