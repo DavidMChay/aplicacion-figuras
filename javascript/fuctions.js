@@ -126,12 +126,13 @@ $(document).ready(function () {
                     geometry = new Square(side);
                     break;
                 case 'trianScalene':
-                    const base = $('#base').val();
-                    const heightTri = $('#height').val();
-                    const side1 = $('#side1').val();
-                    const side2 = $('#side2').val();
-                    if (!validateTriangle(base, heightTri, side1, side2)) {
-                        alert('Dimensiones inválidas para un triángulo. Introduce solo valores númericos positivos.');
+                    const base = parseFloat($('#base').val());
+                    const side1 = parseFloat($('#side1').val());
+                    const side2 = parseFloat($('#side2').val());
+                    const heightTri = parseFloat($('#height').val());
+                    
+                    if (!validateTriangleScalene(base, side1, side2)) {
+                        alert('Dimensiones inválidas para un triángulo escaleno. Introduce solo valores numéricos positivos.');
                         return;
                     }
                     geometry = new TriangleScalene(base, heightTri, side1, side2);
@@ -139,7 +140,7 @@ $(document).ready(function () {
                 case 'trianEquilateral':
                     const baseEq = $('#base').val();
                     const heightTriEq = $('#height').val();
-                    if (!validateTriangle(baseEq, heightTriEq, baseEq, baseEq)) {
+                    if (!validateTriangle(baseEq, baseEq, baseEq)) {
                         alert('Dimensiones inválidas para un triángulo. Introduce solo valores númericos positivos.');
                         return;
                     }

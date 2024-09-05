@@ -16,9 +16,18 @@ class TriangleScalene extends Geometry {
     }
 }
 
-function validateTriangle(base, height, side1, side2) {
+function validateTriangle(base, side1, side2) {
     return (
-        base > 0 && height > 0 && side1 > 0 && side2 > 0 &&
+        base > 0 && side1 > 0 && side2 > 0 &&
+        base + side1 > side2 &&
+        base + side2 > side1 &&
+        side1 + side2 > base
+    );
+}
+
+function validateTriangleScalene(base, side1, side2) {
+    return (
+        base > 0 && side1 > 0 && side2 > 0 &&
         base + side1 > side2 &&
         base + side2 > side1 &&
         side1 + side2 > base
